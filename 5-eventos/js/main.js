@@ -6,7 +6,8 @@ const vm = new Vue({
     },
     methods: {
         agregarTarea(){            
-            this.tareas.push(this.nuevaTarea);            
+            this.tareas.push(this.nuevaTarea);      
+            this.nuevaTarea = null;      
         }
     }
 });
