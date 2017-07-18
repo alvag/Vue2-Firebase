@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Vue.js</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <main>
+            <h1 v-if="conectado">Estoy Conectado</h1>
+
+            <h2 v-if="edad < 18">No puedes entrar</h2>
+            <h2 v-else-if="edad > 200">Eres inmortal</h2>
+            <h2 v-else>Puedes entrar</h2>
+
+            <template v-if="conectado">
+                <h3>Bienvenido</h3>
+                <ul>
+                    <li>
+                        <a href="#">Mis datos</a>
+                        <a href="#">Mensaje</a>
+                        <a href="#">Salir</a>
+                    </li>
+                </ul>
+            </template>
+
+        </main>
+
+
+        <script src="https://unpkg.com/vue@2.4.1"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

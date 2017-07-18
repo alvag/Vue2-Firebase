@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Vue.js</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <main>            
+            <ul>
+                <li v-for="tarea in tareas">{{ tarea }}</li>
+            </ul>
+
+            <input type="text" placeholder="Ingresa tu tarea" v-model="nuevaTarea">
+            <input type="button" value="Enviar tarea" v-on:click="agregarTarea()">
+        </main>
+
+
+        <script src="https://unpkg.com/vue@2.4.1"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
