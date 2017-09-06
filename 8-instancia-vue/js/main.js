@@ -10,17 +10,16 @@ const vm1 = new Vue({
             vm2.mensaje = 'Hola desde instancia 1';
         }
     },
-
     computed: {
-        mensajeMayusculas(){
+        mensajeMayusculas() {
             return this.mensaje.toUpperCase();
         }
     }
 });
 
 const vm2 = new Vue({
-   el: '#app' ,
-   data: {
-       mensaje: 'Instancia Vue 2'
-   }
+    data: {
+        mensaje: 'Instancia Vue 2'
+    },
+    el: '#app'
 });

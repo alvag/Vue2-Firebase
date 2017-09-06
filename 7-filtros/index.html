@@ -16,7 +16,8 @@
             <li v-for="juego in mejoresJuegos">
                 {{ juego.titulo | alRevez }}
             </li>
-        </ul>
+        </ul>        
+        
         <input type="range" min="0" max="10" v-model="minimo">
         <pre>{{ $data }}</pre>
     </main>
