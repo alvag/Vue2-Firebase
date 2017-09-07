@@ -1,13 +1,13 @@
-new Vue({
+const vm = new Vue({
     el: 'main',
-    mounted(){
+    mounted() {
         this.cargarPersonas();
     },
     data: {
         personas: []
     },
     methods: {
-        cargarPersonas(){
+        cargarPersonas() {
             // this.$http.get('https://randomuser.me/api/?results=50')
             //     .then((respuesta) => {
             //         this.personas = respuesta.body.results;
@@ -16,8 +16,8 @@ new Vue({
             axios.get('https://randomuser.me/api/?results=50')
                 .then((respuesta) => {
                     this.personas = respuesta.data.results;
-                })
+                });
         }
     }
-    
+
 });
