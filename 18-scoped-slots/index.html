@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vue.js</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/main.css">    
+</head>
+
+<body>    
+    <main>
+        <mis-tareas :listado="tareas">
+            <template scope="datos">
+                <li>{{ datos.title }}</li>
+            </template>
+        </mis-tareas>
+    </main>
+
+    <!-- Template -->
+    <template id="mis-tareas-template">
+        <ul>
+            <slot v-for="tarea in listado" :title="tarea.titulo"></slot>
+            <!-- <li v-for="tarea in listado">
+                {{ tarea.titulo }}
+            </li> -->
+        </ul>
+    </template>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>    
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
